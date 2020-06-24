@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <meta charset="utf-8">
+  <title>Court Database</title>
+</head>
+
+<body style="background-color:#d4f8e8">
+  <div class="container">
+    <div class="row" style="padding:10px 0 0 0;">
+      <div class="col-md-2">
+        <h1>Notice Database</h1>
+      </div>
+      <div class="col-md-2">
+        <form action="/adminDetails" method="post">
+          <button class="btn btn-lg btn-primary" type="submit" name="button">Admin Details</button>
+        </form>
+      </div>
+      <div class="col-md-2">
+        <form action="/caseDetails" method="post">
+          <button class="btn btn-lg btn-primary" type="submit" name="button">Case Details</button>
+        </form>
+      </div>
+      <div class="col-md-2">
+        <form action="/staffDetails" method="post">
+          <button class="btn btn-lg btn-primary" type="submit" name="button">Staff Details</button>
+        </form>
+      </div>
+      <div class="col-md-2">
+        <form action="/userDetails" method="post">
+          <button class="btn btn-lg btn-primary" type="submit" name="button">User Details</button>
+        </form>
+      </div>
+      <div class="col-md-1 card-header">
+        <form action="/login.html" method="post">
+          <button class="btn btn-lg btn-danger" type="submit" name="button">Log out</button>
+        </form>
+      </div>
+      <div class="col-md-1 card-header">
+        <button class="btn btn-lg btn-warning" type="submit" name="button" onclick="goBack()">Back</button>
+      </div>
+    </div>
+
+  </div>
+
+
+        <%if (noticeInfo.length >0){ %>
+
+          <div class="card" style="width: 100rem;text-align:left;margin-left:100px">
+    <div class="card-body">
+        <%  noticeInfo.forEach(function(info){ %>
+          <hr style="width:60px;border: 1.5px dashed #552244;">
+      <h3 class="card-title" style="color:#f35588"><b> <%= info.title %></b></h3>
+        <b>content:</b><%= info.content %><br>
+      <% })}else{ %>
+        <b>No Record Found</b>
+        <%}%>
+        <hr style="width:60px;border: 1.5px dashed #552244;">
+    </div>
+  </div>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+
+</html>

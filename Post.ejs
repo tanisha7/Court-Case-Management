@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Stenographer</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- Css stylesheet -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/postStyle.css">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col-md-10" style="padding-right:0px;">
+      <div class="card">
+      <div class="card-header" >
+        <h1> <%= title %> </h1>
+      </div>
+    </div>
+    </div>
+      <div class="col-md-1 card-header">
+        <form action="/login.html" method="post">
+          <button class="btn btn-lg btn-danger" type="submit" name="button" >Log out</button>
+        </form>
+        </div>
+        <div class="col-md-1 card-header">
+          <button class="btn btn-lg btn-info" type="submit" name="button" onclick="goBack()">Back</button>
+          </div>
+
+
+    </div>
+
+
+
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <%  posts.forEach(function(post){ %>
+
+      <h3><%=post.title%></h3>
+      <p>
+        <%=post.content.substring(0, 100) + " ..."%>
+        <a href="/posts/<%=post._id%>">Read More</a>
+
+      </p>
+      <hr>
+
+
+      <% }) %>
+
+    </blockquote>
+  </div>
+  <script>
+    function goBack(){
+      window.history.back();
+    }
+
+  </script>
+
+
+
+
+
+
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</body>
+
+</html>
