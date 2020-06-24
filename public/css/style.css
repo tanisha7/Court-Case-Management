@@ -1,0 +1,149 @@
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+p {
+    color: #444;
+}
+
+button {
+    margin-bottom: 10px;
+    padding: 10px 10px;
+}
+
+button:focus {
+    outline: 0;
+}
+/* .title-icon{
+  margin-top: 50px;
+} */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.container h1 {
+    margin-bottom: 10px;
+}
+
+.page-description {
+    font-size: 1.1rem;
+    margin: 0 auto;
+}
+
+.tz-link {
+    font-size: 1em;
+    color: #1da7da;
+    text-decoration: none;
+}
+
+.no-browser-support {
+    display: none;
+    font-size: 1.2rem;
+    color: #e64427;
+    margin-top: 35px;
+}
+
+.app {
+    margin: 20px auto;
+}
+
+#note-textarea {
+    margin: 10px 0;
+    width: 90%;
+}
+
+#recording-instructions {
+    margin: 15px auto 5px;
+}
+
+#notes {
+    padding-top: 20px;
+}
+
+.note .header {
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.note .delete-note,
+.note .listen-note {
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.note .content {
+    margin-bottom: 30px;
+}
+
+.align-center img {
+    padding-top: 10px;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.center {
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 15px;
+    }
+    button {
+        margin-bottom: 20px;
+        padding: 10px 10px;
+        width: 80%;
+    }
+}
+
+/*Register*/
+/*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+#upload {
+    opacity: 0;
+}
+
+#upload-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.image-area {
+    border: 2px dashed rgb(0, 0, 0, 0.7);
+    padding: 1rem;
+    position: relative;
+}
+
+.image-area::before {
+    content: 'Uploaded image result';
+    color: #444;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+
+.image-area img {
+    z-index: 2;
+    position: relative;
+}

@@ -1,0 +1,129 @@
+body{
+  text-align: center;
+  background: #F1F3FA;
+}
+.container{
+  padding: 2%;
+  text-align: center;
+
+}
+h3{
+  margin-bottom: 30px;
+  text-align: centre;
+}
+.cls{
+  border-radius: 10px;
+}
+.search-feild{
+  width: 600px;
+  display:inline-block;
+  margin-left: 10px;
+}
+/* .input-group>.custom-select:not(:last-child){
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+} */
+.input-group>.custom-select:not(:first-child), .input-group>.form-control:not(:first-child) {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.wrapper {
+    text-align: center;
+}
+.searchsubmit{
+  margin-left: 50px;
+  width:190px;
+  margin-bottom: 80px;
+  line-height: 1.5rem;
+}
+.grey-section{
+  background-color:#e3e3e1;
+  padding: 2% 8%;
+  text-align: center;
+}
+
+
+.profile {
+  margin: 20px 0;
+}
+
+.case-sidebar {
+  padding: 20px 0 10px 0;
+  background: #fff;
+}
+
+.case-usertitle-name{
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+
+}
+.case-userbuttons {
+  margin-top: 10px;
+}
+.case-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
+}
+ul li{
+  line-height: 1.5rem;
+  text-align: left;
+}
+.case-userbuttons .btn:last-child {
+  margin-right: 0;
+}
+.case-usermenu {
+  margin-top: 30px;
+  height: 250px;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.case-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+}
+
+.case-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+.case-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.case-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.case-usermenu ul li a:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
+}
+
+.case-usermenu ul li.active {
+  border-bottom: none;
+}
+
+.case-usermenu ul li.active a {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}
+ul.entries li {
+    display:table-cell;
+}
+
+/* Case Content */
+.case-content {
+  padding: 20px;
+  background: #fff;
+  min-height: 460px;
+}
