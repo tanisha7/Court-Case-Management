@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/styleSteno.css">
+  <title>Adminstrator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+  <h1>Welcome Admin !!</h1>
+  <div class="row profile">
+    <div class="col-md-3">
+      <div class="profile-sidebar">
+        <!-- SIDEBAR USERPIC -->
+        <div class="profile-userpic">
+          <img class="d-block mx-auto mb-4" src="images/ecourt.png" alt="" style="height:80px;width:80px;margin-left:115px;">
+        </div>
+        <!-- END SIDEBAR USERPIC -->
+        <!-- SIDEBAR USER TITLE -->
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name">
+            <h2>Admin Profile</h2>
+          </div>
+          <div class="profile-usertitle-job">
+            <h5>Adminstrator</h5>
+          </div>
+        </div>
+        <!-- END SIDEBAR USER TITLE -->
+        <!-- SIDEBAR BUTTONS -->
+        <div class="profile-userbuttons">
+          <article class="card-body mx-auto">
+            <form action="/userPost" method="post">
+              <button class="btn btn-large btn-success" type="submit" name="button">View Notice</button>
+            </form>
+            <br>
+            <form action="/login.html" method="post">
+              <button class="btn btn-large btn-danger" type="submit" name="button">Log Out</button>
+            </form>
+
+        </div>
+        <!-- END SIDEBAR BUTTONS -->
+      </div>
+    </div>
+    <div class="col-md-7">
+      <h1 class="card-title mt-3 text-center">Add Data</h1>
+      <form class="" action="/adminInsert" method="post">
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+          </div>
+          <input name="partyName1" class="form-control" placeholder="partyName1" type="text" required autocomplete="off">
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+          </div>
+          <input name="partyName2" class="form-control" placeholder="partyName2" type="text" required autocomplete="off">
+        </div>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"><i class="fa fa-id-card" aria-hidden="true"></i></span>
+          </div>
+          <input name="cnn" class="form-control" placeholder="CNN NO." type="text" maxlength="4" required autocomplete="off">
+        </div> <!-- form-group// -->
+
+
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-pencil" aria-hidden="true"></i> </span>
+          </div>
+          <select name="category" class="form-control">
+            <option selected=""> Select Case Type</option>
+            <option>Criminal Case</option>
+            <option>Civil Case</option>
+            <option>Enforcement Case</option>
+            <option>Estate Administration Case</option>
+            <option>Property Registration</option>
+            <option>Notarial Services</option>
+          </select>
+        </div> <!-- form-group end.// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-id-card" aria-hidden="true"></i></span>
+          </div>
+          <input name="caseno" id="CaseN" class="form-control" placeholder="Case Number" type="text" maxlength="10" required autocomplete="off">
+        </div> <!-- form-group// -->
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-calendar" aria-hidden="true"></i>
+          </div>
+          <input type="text" class="form-control" maxlength="4" name="year" placeholder="Year" required autocomplete="off">
+        </div>
+        <label for="date_of_filling">Date of Filling: </label><br>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-calendar" aria-hidden="true"></i>
+          </div>
+          <input type="date" class="form-control" name="date_of_filling">
+        </div>
+        <label for="date_of_register">Date of Register: </label><br>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-calendar" aria-hidden="true"></i>
+          </div>
+          <input type="date" class="form-control" name="date_of_register">
+        </div>
+        <label for="date_of_disposal">Date of Disposal: </label><br>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-calendar" aria-hidden="true"></i>
+          </div>
+          <input type="date" class="form-control" name="date_of_disposal">
+        </div>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-gavel" aria-hidden="true"></i> </span>
+          </div>
+          <input name="caseBetween" class="form-control" placeholder="Case Title" type="text" required autocomplete="off">
+        </div>
+        <div class="form-group input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text"> <i class="fa fa-university" aria-hidden="true"></i> </span>
+          </div>
+          <select name="status" class="form-control">
+            <option selected="">Case Status</option>
+            <option>Pending</option>
+            <option>Disposed</option>
+          </select>
+        </div>
+        <div class="form-group col text-center" style="margin-left:250px;width:250px;">
+          <button type="submit" onclick="func()" class="btn btn-primary btn-lg btn-block" aria-hidden="true"> Insert Data </button>
+        </div><!-- form-group// -->
+      </form>
+      </article>
+    </div>
+    <div class="col-md-2">
+      <div class="profile-content">
+        <center>
+          <h1><em>Court Database</em></h1>
+          <div class="profile-usermenu">
+            <form action="/adminDetails" method="post">
+              <button class="btn btn-lg btn-primary" type="submit" name="button">Admin Details</button>
+            </form>
+            <br>
+            <form action="/caseDetails" method="post">
+              <button class="btn btn-lg btn-success" type="submit" name="button">Case Details</button>
+            </form>
+            <br>
+            <form action="/staffDetails" method="post">
+              <button class="btn btn-lg btn-info" type="submit" name="button">Staff Details</button>
+            </form>
+            <br>
+            <form action="/userDetails" method="post">
+              <button class="btn btn-lg btn-warning" type="submit" name="button">User Details</button>
+            </form>
+            <br>
+            <form action="/noticeDetails" method="post">
+              <button class="btn btn-lg btn-danger" type="submit" name="button">Notice Details</button>
+            </form>
+
+          </div>
+        </center>
+      </div>
+    </div>
+  </div>
+
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="\js\uploadImage.js"></script>
+  <script>
+  function func(){
+    alert("Account Created Succesfully!!");
+  }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SPEECH-o-TEXT App</title>
+  <meta name="description" content="A Voice Note App that allows you to take voice and/or text notes and play them back.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="ico/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Custom Style Sheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap CDN CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.1/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-0Mou2qXGeXK7k/Ue/a1hspEVcEP2zCpoQZw8/MPeUgISww+VmDJcy2ri9tX0a6iy" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-light">
+
+  <div class="container-fluid align-center">
+    <img src="img/code-mic-150.png" alt="Voice Note App Logo" height="10%" width="10%">
+    <h1>SPEECH-o-TEXT</h1>
+    <p class="page-description">This app allows you to take voice notes and used for legal work.</p>
+  </div>
+  <hr>
+  <h3 class="no-browser-support">Sorry, Your Browser Doesn't Support the Web Speech API. Try Opening This Demo In Google Chrome.</h3>
+  <div class="app">
+
+    <form class="" action="/speech" method="post">
+      <div class="row">
+        <div class="col-md-4 align-center">
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-user-secret" aria-hidden="true"></i></span>
+            </div>
+            <input type="text" class="form-control" name="magistrate" placeholder="Majistrate Name" required autocomplete="off">
+          </div>
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-info" aria-hidden="true"></i></span>
+            </div>
+            <input type="text" class="form-control" name="sessionNo" placeholder="Session Number" maxlength="8" required autocomplete="off">
+          </div>
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+            </div>
+            <input type="text" class="form-control" name="stenoId" placeholder="Stenographer ID" maxlength="8" required autocomplete="off">
+          </div>
+        </div>
+        <div class="col-md-4 align-center">
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-id-card" aria-hidden="true"></i></span>
+            </div>
+          <input type="text" class="form-control" name="cnnNo1" placeholder="CNN Number 1" maxlength="8" required autocomplete="off">
+          </div>
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-id-card" aria-hidden="true"></i></span>
+            </div>
+            <input type="text" class="form-control" name="cnnNo2" placeholder="CNN Number 2" maxlength="8" required autocomplete="off">
+          </div>
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-calendar" aria-hidden="true"></i>
+            </div>
+            <input type="date" class="form-control"  name="date" required autocomplete="off">
+          </div> <!-- form-group end// -->
+        </div>
+        <div class="col-md-4 align-center">
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-user" aria-hidden="true"></i></span>
+            </div>
+            <input type="text" class="form-control" name="lawyer1" placeholder="Lawyer1 ID" required maxlength="8"  autocomplete="off">
+          </div>
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-user" aria-hidden="true"></i></span>
+            </div>
+            <input type="text" class="form-control" name="lawyer2" placeholder="Lawyer2 ID" required maxlength="8" autocomplete="off">
+          </div>
+          <div class="form-group input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"> <i class="fa fa-clock-o" aria-hidden="true"></i></span>
+            </div>
+            <input type="time" class="form-control" name="time" required autocomplete="off">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2 align-center">
+        </div>
+        <div class="col-md-8 align-center">
+          <div class="input-single">
+            <textarea id="note-textarea" name="text" required readonly placeholder="Create a new case note by using voice recognition." rows="7"></textarea>
+          </div>
+          <button id="submit-record-btn" class="btn-success" title="Upload Details"><i class="fa fa-upload" aria-hidden="true"></i> Upload Details</button>
+        </div>
+        <div class="col-md-2 align-center">
+          <!-- <h3>My Voice Notes</h3>
+        <ul id="notes">
+          <li>
+            <p class="no-notes">You don't have any notes.</p>
+          </li>
+        </ul>-->
+        </div>
+      </div>
+      <!-- /row -->
+    </form>
+
+    <br>
+
+    <div class="row">
+      <div class="col-md-2 align-center">
+      </div>
+      <div class="col-md-8 align-center">
+        <button id="start-record-btn" class="btn-info" title="Start Recording">
+          <i class="fa fa-microphone" aria-hidden="true"></i> Start Recognition</button>
+        <button id="pause-record-btn" class="btn-warning" title="Pause Recording">
+          <i class="fa fa-pause" aria-hidden="true"></i> Pause Recognition</button>
+        <button id="stop-record-btn" class="btn-danger" title="Stop"><i class="fa fa-stop" aria-hidden="true"></i>
+          Stop Recognition</button>
+        <p id="recording-instructions">Press the
+          <strong>Start Recognition</strong> button and allow access.</p>
+      </div>
+    </div>
+
+  </div>
+  <!-- /app -->
+
+  <div id="footer">
+    <div class="clearfix1">
+      <div class="container align-center">
+        <p>Speech to Text Voice Converter</p>
+      </div>
+      <!-- /container -->
+    </div>
+  </div>
+  <!-- /footer -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/convertSpeech.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="bg-light">
+
+  <article class="card-body mx-auto" style="max-width: 400px;">
+    <img class="d-block mx-auto mb-4 title-icon" src="images/ecourt.png" alt="" width="72" height="72">
+  	<h4 class="card-title mt-3 text-center">Log In</h4>
+  <form action="/user" method="post">
+    <div class="form-group input-group">
+      <div class="input-group-prepend">
+        <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+      </div>
+      <select class="form-control" name='loginJob' required>
+        <option selected=""> Select job type</option>
+        <option>Adminstrator</option>
+        <option>Lawyer</option>
+        <option>Party Name</option>
+        <option>Stenographer</option>
+      </select>
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="loginId" class="form-control" placeholder="User Id" type="text"  maxlength="8" required autocomplete="off">
+    </div> <!-- form-group// -->
+
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-key"></i> </span>
+		</div>
+        <input class="form-control" placeholder="Password" type="password" name='loginPass' maxlength="10" required>
+    </div> <!-- form-group// -->
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"> Log In  </button>
+    </div> <!-- form-group// -->
+    <p class="text-center">Don't have an account? <a href="regStaff.html">Create Account As Staff</a> </p>
+    <p class="text-center">Don't have an account?  <a href="regUser.html">Create Account As User</a> </p>
+</form>
+</article>
+
+
+</html>

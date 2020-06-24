@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body class="bg-light">
+
+
+  <article class="card-body mx-auto" style="max-width: 400px;">
+    <img class="d-block mx-auto mb-4 title-icon" src="images/ecourt.png" alt="" width="72" height="72">
+    <h4 class="card-title mt-3 text-center">Create User Account</h4>
+    <form class="" action="/loginUser" method="post">
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+        </div>
+        <input name="uName" class="form-control" placeholder="Full name" type="text" required autocomplete="off">
+      </div> <!-- form-group// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+        </div>
+        <input name="uEmail" class="form-control" placeholder="Email address" type="email"  required autocomplete="off">
+      </div> <!-- form-group// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+        </div>
+        <select name="uContactH" class="custom-select" style="max-width: 120px;"  >
+          <option selected="">+91</option>
+          <option value="1">011</option>
+        </select>
+        <input name="uContact" class="form-control" placeholder="Phone number" type="text" maxlength="10" required autocomplete="off">
+      </div> <!-- form-group// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-university" aria-hidden="true"></i> </span>
+        </div>
+        <select name="uDC" class="form-control">
+          <option selected=""> Select District Court</option>
+          <option>Central District</option>
+          <option>West District</option>
+          <option>East District</option>
+          <option>North-East District</option>
+          <option>Shahdara District</option>
+          <option>New Delhi District</option>
+          <option>North-West District</option>
+          <option>North District</option>
+          <option>South-West District</option>
+          <option>South District</option>
+          <option>South-East District</option>
+        </select>
+      </div> <!-- form-group end.// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-pencil" aria-hidden="true"></i> </span>
+        </div>
+        <select name="uCaseT" class="form-control">
+          <option selected=""> Select Case Type</option>
+          <option>Criminal Case</option>
+          <option>Civil Case</option>
+          <option>Enforcement Case</option>
+          <option>Estate Administration Case</option>
+          <option>Property Registration</option>
+          <option>Notarial Services</option>
+        </select>
+      </div> <!-- form-group end.// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-id-card" aria-hidden="true"></i></span>
+        </div>
+        <input name="uCaseN" id="CaseN" class="form-control" placeholder="Case Number" type="text" maxlength="4" required autocomplete="off">
+      </div> <!-- form-group// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-calendar" aria-hidden="true"></i>
+        </div>
+        <input type="date" class="form-control"  name="uDate">
+      </div> <!-- form-group end// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-calendar" aria-hidden="true"></i>
+        </div>
+        <input type="text" class="form-control"  maxlength="4" name="uYY" placeholder="Year" required autocomplete="off">
+      </div>
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+        </div>
+        <input name="uPassword" class="form-control" placeholder="Create password" type="password" maxlength="8">
+      </div> <!-- form-group// -->
+      <div class="form-group input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+        </div>
+        <input class="form-control" name="uRePassword" placeholder="Repeat password" type="password" maxlength="8">
+      </div> <!-- form-group// -->
+      <!--<div class="form-group">
+                            <div class="g-recaptcha" data-sitekey="6LfKURIUAAAAAO50vlwWZkyK_G2ywqE52NU7YO0S" data-callback="verifyRecaptchaCallback" data-expired-callback="expiredRecaptchaCallback"></div>
+                            <input class="form-control d-none" data-recaptcha="true" required data-error="Please complete the Captcha">
+                            <div class="help-block with-errors"></div>
+                        </div>-->
+
+      <!-- Upload image input-->
+      <div class="input-group mb-3 px-2 py-2 bg-white shadow-sm " style='border-radius: .25rem; border:1px solid rgb(119, 136, 153, 0.5);'>
+        <input id="upload" type="file" onchange="readURL(this);" class="form-control  border-0">
+        <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+        <div class="input-group-append">
+          <label for="upload" class="btn btn-light m-0 " style='border-radius: .25rem; border:1px solid rgb(112, 128, 148, 0.5);'>
+            <i class="fa fa-cloud-upload mr-2 text-muted"></i>
+            <small class="text-uppercase font-weight-bold text-muted">Choose file</small>
+          </label>
+        </div>
+      </div>
+
+      <!-- Uploaded image area-->
+      <p class="font-italic text-center">The image uploaded will be rendered inside the box below.</p>
+      <div class="image-area mt-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
+
+
+      <br>
+      <div class=" form-group">
+        <button type="submit" class="btn btn-primary btn-block" aria-hidden="true"> Create Account </button>
+      </div><!-- form-group// -->
+  </article>
+  <p class="text-center">Have an account? <a href="login.html">Log In</a> </p>
+  </form>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="\js\uploadImage.js"></script>
+  <script src="\regUser.js"></script>
+  <!-- <script>
+  function func(){
+    alert("Account Created Succesfully!!");
+  }
+  </script> -->
+</body>
+
+</html>

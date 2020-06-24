@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Case Timeline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- Css stylesheet -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/searchstyles.css">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body class="bg-light">
+<form class="" action="/searchR" method="post">
+  <div class="container">
+    <div class="py-5 text-center title-section">
+      <img class="d-block mx-auto mb-4" src="images/ecourt.png" alt="" width="72" height="72">
+      <h2>Case Timeline</h2>
+    </div>
+
+    <!-- <div class="mb-3 search-feild">
+      <label for="username">Case Type</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text"></span>
+        </div>
+        <input type="text" class="form-control" name="cnn" id="ctype" placeholder="Case Type" required>
+        <div class="invalid-feedback" style="width: 100%;">
+          Your Case Type is required.
+        </div>
+      </div>
+    </div> -->
+    <div class="mb-3 search-feild">
+      <!-- <label for="username"></label> -->
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">&#128194;</span>
+        </div>
+        <input type="text" class="form-control" name="searchcnn" id="cnno" placeholder="Case Number" required>
+        <div class="invalid-feedback" style="width: 100%;">
+          Your Case Number is required.
+        </div>
+      </div>
+    </div>
+    <div class="mb-3 search-feild">
+      <label for="username">Year</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">&#128198;</span>
+        </div>
+        <input type="text" class="form-control" name="searchyear" id="cyear" placeholder="Case Year" required>
+        <div class="invalid-feedback" style="width: 100%;">
+           Year is required.
+        </div>
+      </div>
+    </div>
+    <div class="md-3 search-feild form-group input-group  cls">
+
+      <label for="country">Court Complex</label>
+      <select class="custom-select d-block w-100" id="ccomplex" required>
+        <option selected=""> Select District Court</option>
+        <option>Central District</option>
+        <option>West District</option>
+        <option>East District</option>
+        <option>North-East District</option>
+        <option>Shahdara District</option>
+        <option>New Delhi District</option>
+        <option>North-West District</option>
+        <option>North District</option>
+        <option>South-West District</option>
+        <option>South District</option>
+        <option>South-East District</option>
+      </select>
+      <div class="invalid-feedback">
+        Please select a valid court complex.
+      </div>
+    </div>
+  </div>
+  <!-- </div> -->
+  <div class="wrapper">
+    <hr>
+    <button type="submit" class="btn btn-primary btn-lg searchsubmit">Search</button>
+  </div>
+
+
+</form>
+
+
+
+</body>
+<footer class="grey-section">
+
+  <h6>Contact us:</h6>
+  <font size="1">
+    <b>State</b>
+    : Delhi</br>
+    <b>District</b>
+    : South West <br>
+    <!-- <p>
+    </p>
+    </p> -->
+    <b><u>Address</u></b>
+    <p>
+      Dwarka District Courts (SW)</br>
+      Near Dwarka Sector-10 Metro Station</br>
+      Dwarka Sector-10</br>
+      New Delhi-110075</br>
+      Tel Nos : 01128042850-57
+
+    </p>
+
+
+
+
+  </font>
+
+  <p>© Copyright 2020 </p>
+</footer>
+
+</html>
