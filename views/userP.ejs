@@ -1,0 +1,84 @@
+<html lang="en" dir="ltr">
+
+<head>
+
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/styleSteno.css">
+  <title>UserProfile</title>
+</head>
+
+<body>
+  <h1>Welcome <%=name%> !!</h1>
+    <div class="row profile">
+      <div class="col-md-3">
+        <div class="profile-sidebar">
+          <!-- SIDEBAR USERPIC -->
+          <div class="profile-userpic">
+            <img class="image-responsive" src="images/circle-cropped.png" alt="" style="height:80px;width:80px;margin-left:115px;">
+          </div>
+          <!-- END SIDEBAR USERPIC -->
+          <!-- SIDEBAR USER TITLE -->
+          <div class="profile-usertitle">
+            <div class="profile-usertitle-name">
+              <%=name%>
+            </div>
+          </div>
+          <div class="profile-userbuttons">
+            <form action="/login.html" method="post">
+              <button class="btn btn-large btn-danger" type="submit" name="button">Log Out</button>
+            </form>
+         </div>
+          <div class="profile-usermenu">
+            <ul class="nav">
+              <li>
+                  <i class="glyphicon glyphicon-user"></i>
+                  <%=cnn%>
+              </li>
+              <li>
+                  <i class="glyphicon glyphicon-user"></i>
+                  <%=caseType%>
+              </li>
+              <li>
+                  <i class="glyphicon glyphicon-user"></i>
+                  Case status :+<%=cstatus%>
+              </li>
+              <li>
+                  <i class="glyphicon glyphicon-calendar"></i>
+                  Date Of Filling :<%=dateOfFile%>
+              </li>
+              <li>
+                  <i class="glyphicon glyphicon-bookmark"></i>
+                  Date Of Registeration :<%=dateOfRegister%>
+              </li>
+              <li>
+                  <i class="glyphicon glyphicon-home"></i>
+                   <%=dc%>
+              </li>
+              <li>
+                  <i class="glyphicon glyphicon-phone"></i>
+                   <%=contact%>
+              </li>
+              <li>
+                  <i class="glyphicon glyphicon-envelope"></i>
+                   <%=email%>
+              </li>
+            </ul>
+          </div>
+          <!-- END MENU -->
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="profile-content">
+          AS PER THE ADVISORY ISSUED BY THE HON'BLE HIGH COURT OF DELHI REGARDING CORONA-VIRUS,
+          LITIGANTS ARE INFORMED THAT NO ADVERSE ORDER SHALL BE PASSED FOR NON-APPEARANCE IN THE COURT TILL FURTHER ORDERS.
+        </div>
+      </div>
+    </div>
+
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</body>
+</html>

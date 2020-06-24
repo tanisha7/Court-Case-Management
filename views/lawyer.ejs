@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/css/styleSteno.css">
+  <title>Stenographer</title>
+</head>
+
+<body>
+  <h1>Welcome <%=name%> !!</h1>
+  <div class="row profile">
+    <div class="col-md-3">
+      <div class="profile-sidebar">
+        <!-- SIDEBAR USERPIC -->
+        <div class="profile-userpic">
+          <img class="d-block mx-auto mb-4" src="images/ecourt.png" alt="" style="height:80px;width:80px;margin-left:115px;">
+        </div>
+        <!-- END SIDEBAR USERPIC -->
+        <!-- SIDEBAR USER TITLE -->
+        <div class="profile-usertitle">
+          <div class="profile-usertitle-name">
+            <%=name%>
+          </div>
+          <div class="profile-usertitle-job">
+            <%=job%>
+          </div>
+        </div>
+        <!-- END SIDEBAR USER TITLE -->
+        <!-- SIDEBAR BUTTONS -->
+        <div class="profile-userbuttons">
+
+          <form action="/userPost" method="post">
+            <button class="btn btn-large btn-success" type="submit" name="button">View Notice</button>
+          </form>
+          <br>
+          <form action="/login.html" method="post">
+            <button class="btn btn-large btn-danger" type="submit" name="button">Log Out</button>
+          </form>
+
+        </div>
+        <!-- END SIDEBAR BUTTONS -->
+        <!-- SIDEBAR MENU -->
+        <div class="profile-usermenu">
+          <ul class="nav">
+            <li>
+              <i class="glyphicon glyphicon-user"></i>
+              <%=id%>
+            </li>
+            <li>
+              <i class="glyphicon glyphicon-home"></i>
+              <%=dc%>
+            </li>
+            <li>
+              <i class="glyphicon glyphicon-phone"></i>
+              <%=contact%>
+            </li>
+            <li>
+              <i class="glyphicon glyphicon-envelope"></i>
+              <%=email%>
+            </li>
+          </ul>
+        </div>
+        <!-- END MENU -->
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div class="profile-content">
+        <h1>Publish New Notice</h1>
+        <form class="" action="/compose" method="post">
+          <div class="form-group">
+            <label>Title</label>
+            <input class="form-control" type="text" name="postTitle" required autocomplete="off">
+            <label>Content</label>
+            <textarea class="form-control" name="postBody" rows="5" cols="30" required autocomplete="off"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit" name="button">Publish</button>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</body>
+</html>
